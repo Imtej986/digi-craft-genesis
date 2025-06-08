@@ -21,7 +21,7 @@ const Footer = () => {
     Services: [
       { name: 'Web Design', href: '#services' },
       { name: 'Brand Strategy', href: '#services' },
-      { name: '3D Experiences', href: '#services' },
+      { name: 'Interactive Experiences', href: '#services' },
       { name: 'SEO & Performance', href: '#services' },
     ],
     Resources: [
@@ -33,14 +33,14 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-card/30 backdrop-blur-sm border-t border-electric/20">
       <div className="container mx-auto px-6 py-16">
         {/* Main Footer Content */}
         <div className="grid lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="font-grotesk font-bold text-2xl mb-4">
-              Digi<span className="text-electric">Craft</span>
+            <div className="font-grotesk font-bold text-3xl mb-4 hover:scale-105 transition-transform cursor-pointer">
+              <span className="text-electric text-glow">DC</span>
             </div>
             <p className="text-muted-foreground mb-6 leading-relaxed">
               We craft digital experiences that build brands and drive results. 
@@ -52,7 +52,7 @@ const Footer = () => {
                   key={index}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 bg-electric/10 rounded-lg flex items-center justify-center text-electric hover:bg-electric hover:text-electric-foreground transition-colors"
+                  className="w-10 h-10 bg-electric/20 rounded-lg flex items-center justify-center text-electric hover:bg-electric hover:text-electric-foreground transition-all duration-300 hover:glow-electric hover:scale-110"
                 >
                   <social.icon size={20} />
                 </a>
@@ -63,13 +63,13 @@ const Footer = () => {
           {/* Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h3 className="font-semibold mb-4">{category}</h3>
+              <h3 className="font-semibold mb-4 text-electric">{category}</h3>
               <ul className="space-y-3">
                 {links.map((link, index) => (
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-muted-foreground hover:text-electric transition-colors"
+                      className="text-muted-foreground hover:text-electric transition-all duration-200 hover:translate-x-1"
                     >
                       {link.name}
                     </a>
@@ -80,41 +80,19 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Newsletter */}
-        <div className="bg-background rounded-2xl p-8 mb-12 border">
-          <div className="grid md:grid-cols-2 gap-6 items-center">
-            <div>
-              <h3 className="text-xl font-bold mb-2">Stay Updated</h3>
-              <p className="text-muted-foreground">
-                Get insights on web design trends, case studies, and exclusive tips.
-              </p>
-            </div>
-            <div className="flex gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 border border-electric/20 rounded-md focus:border-electric focus:outline-none bg-card"
-              />
-              <button className="bg-electric hover:bg-electric/90 text-electric-foreground font-medium px-6 py-3 rounded-md transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-electric/20">
           <div className="text-muted-foreground mb-4 md:mb-0">
             © {currentYear} Digi Craft. All rights reserved.
           </div>
           <div className="flex space-x-6 text-sm">
-            <a href="#" className="text-muted-foreground hover:text-electric transition-colors">
+            <a href="#" className="text-muted-foreground hover:text-electric transition-colors hover:scale-105">
               Privacy Policy
             </a>
-            <a href="#" className="text-muted-foreground hover:text-electric transition-colors">
+            <a href="#" className="text-muted-foreground hover:text-electric transition-colors hover:scale-105">
               Terms of Service
             </a>
-            <a href="#" className="text-muted-foreground hover:text-electric transition-colors">
+            <a href="#" className="text-muted-foreground hover:text-electric transition-colors hover:scale-105">
               Cookie Policy
             </a>
           </div>

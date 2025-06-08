@@ -61,6 +61,10 @@ export default {
 					DEFAULT: 'hsl(var(--electric))',
 					foreground: 'hsl(var(--electric-foreground))'
 				},
+				'electric-dark': {
+					DEFAULT: 'hsl(var(--electric-dark))',
+					foreground: 'hsl(var(--electric-dark-foreground))'
+				},
 				neon: {
 					DEFAULT: 'hsl(var(--neon))',
 					foreground: 'hsl(var(--neon-foreground))'
@@ -130,10 +134,18 @@ export default {
 				},
 				'pulse-electric': {
 					'0%, 100%': {
-						boxShadow: '0 0 0 0 rgba(59, 130, 246, 0.7)'
+						boxShadow: '0 0 0 0 rgba(96, 165, 250, 0.7)'
 					},
 					'70%': {
-						boxShadow: '0 0 0 10px rgba(59, 130, 246, 0)'
+						boxShadow: '0 0 0 15px rgba(96, 165, 250, 0)'
+					}
+				},
+				'glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px hsl(var(--electric) / 0.5)'
+					},
+					'50%': {
+						boxShadow: '0 0 40px hsl(var(--electric) / 0.8)'
 					}
 				}
 			},
@@ -143,7 +155,8 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-in-left': 'slide-in-left 0.6s ease-out',
 				'float': 'float 3s ease-in-out infinite',
-				'pulse-electric': 'pulse-electric 2s infinite'
+				'pulse-electric': 'pulse-electric 2s infinite',
+				'glow': 'glow 2s ease-in-out infinite'
 			}
 		}
 	},

@@ -44,9 +44,9 @@ const Process = () => {
     <section id="process" className="py-24 bg-gradient-to-br from-electric/5 to-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Our <span className="text-electric">Process</span>
+            Our <span className="text-electric text-glow">Process</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A proven methodology that delivers exceptional results, 
@@ -57,18 +57,18 @@ const Process = () => {
         {/* Process Steps */}
         <div className="relative">
           {/* Connection line */}
-          <div className="hidden lg:block absolute left-1/2 transform -translate-x-px top-16 bottom-16 w-px bg-gradient-to-b from-electric via-electric/50 to-electric"></div>
+          <div className="hidden lg:block absolute left-1/2 transform -translate-x-px top-16 bottom-16 w-px bg-gradient-to-b from-electric via-electric/50 to-electric glow-electric"></div>
 
           <div className="space-y-16">
             {steps.map((step, index) => (
-              <div key={index} className={`flex flex-col lg:flex-row items-center gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              <div key={index} className={`flex flex-col lg:flex-row items-center gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} animate-on-scroll`} style={{ animationDelay: `${index * 0.2}s` }}>
                 {/* Content */}
                 <div className={`flex-1 ${index % 2 === 1 ? 'lg:text-right' : ''}`}>
-                  <div className="bg-card rounded-2xl p-8 border hover:border-electric/40 transition-colors">
+                  <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-electric/20 hover:border-electric/60 hover:glow-electric transition-all duration-300 hover:scale-105 cursor-pointer">
                     <div className="flex items-center gap-4 mb-4">
-                      <span className="text-4xl font-bold text-electric">{step.number}</span>
+                      <span className="text-4xl font-bold text-electric text-glow">{step.number}</span>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold">{step.title}</h3>
+                        <h3 className="text-2xl font-bold hover:text-electric transition-colors">{step.title}</h3>
                         <span className="text-sm text-muted-foreground">{step.duration}</span>
                       </div>
                     </div>
@@ -78,11 +78,11 @@ const Process = () => {
 
                 {/* Icon */}
                 <div className="relative">
-                  <div className="w-16 h-16 bg-electric rounded-full flex items-center justify-center text-electric-foreground shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-electric to-electric-dark rounded-full flex items-center justify-center text-electric-foreground shadow-lg glow-electric hover:glow-electric-intense hover:scale-110 transition-all duration-300 cursor-pointer">
                     <step.icon size={24} />
                   </div>
                   {index < steps.length - 1 && (
-                    <div className="lg:hidden absolute top-16 left-1/2 transform -translate-x-px w-px h-16 bg-electric/30"></div>
+                    <div className="lg:hidden absolute top-16 left-1/2 transform -translate-x-px w-px h-16 bg-electric/30 glow-electric"></div>
                   )}
                 </div>
 
@@ -94,17 +94,17 @@ const Process = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-card rounded-2xl p-8 border">
+        <div className="text-center mt-16 animate-on-scroll">
+          <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-electric/20 glow-electric hover:border-electric/60 hover:glow-electric-intense transition-all duration-300">
             <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
             <p className="text-muted-foreground mb-6">
               Let's discuss your project and see how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-electric hover:bg-electric/90 text-electric-foreground font-medium px-8 py-3 rounded-md transition-colors">
+              <button className="bg-gradient-to-r from-electric to-electric-dark hover:from-electric-dark hover:to-electric text-electric-foreground font-medium px-8 py-3 rounded-md transition-all duration-300 glow-electric hover:glow-electric-intense hover:scale-105">
                 Schedule a Call
               </button>
-              <button className="border border-electric text-electric hover:bg-electric hover:text-electric-foreground font-medium px-8 py-3 rounded-md transition-colors">
+              <button className="border border-electric/50 text-electric hover:bg-electric/10 hover:border-electric font-medium px-8 py-3 rounded-md transition-all duration-300 hover:scale-105 hover:glow-electric">
                 Get a Quote
               </button>
             </div>
