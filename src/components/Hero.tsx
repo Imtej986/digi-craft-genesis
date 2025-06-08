@@ -9,6 +9,7 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center gradient-hero overflow-hidden">
+      <iframe src='https://my.spline.design/radialglass-Jsd7fTj3Kpptsfnoxrj11Iel/' className='absolute right-2' width='100%' height='100%'></iframe>
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-20 w-4 h-4 bg-electric rounded-full animate-float opacity-60 glow-electric"></div>

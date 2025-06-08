@@ -20,7 +20,7 @@ const FeaturedProject = () => {
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Rebuilding Trust,
             <br />
-            One <span className="text-gold">Pixel</span> at a Time.
+            One <span className="text-electric">Pixel</span> at a Time.
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             How we transformed a traditional roofing company into a digital powerhouse 
@@ -31,7 +31,7 @@ const FeaturedProject = () => {
         {/* Project Overview */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 bg-gold/10 text-gold px-4 py-2 rounded-full text-sm font-medium">
+            <div className="inline-flex items-center gap-2 bg-electric/10 text-electric px-4 py-2 rounded-full text-sm font-medium">
               Featured Case Study
             </div>
             
@@ -47,11 +47,11 @@ const FeaturedProject = () => {
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <div className="text-2xl font-bold text-gold">$15,000</div>
+                <div className="text-2xl font-bold text-electric">$15,000</div>
                 <div className="text-sm text-muted-foreground">Project Investment</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-gold">6 weeks</div>
+                <div className="text-2xl font-bold text-electric">6 weeks</div>
                 <div className="text-sm text-muted-foreground">Delivery Time</div>
               </div>
             </div>
@@ -67,7 +67,7 @@ const FeaturedProject = () => {
               ))}
             </div>
 
-            <Button className="bg-gold hover:bg-gold/90 text-gold-foreground font-medium">
+            <Button className="bg-electric hover:bg-electric/90 text-electric-foreground font-medium">
               View Live Site
               <ExternalLink size={16} className="ml-2" />
             </Button>
@@ -75,7 +75,7 @@ const FeaturedProject = () => {
 
           <div className="relative">
             {/* Main project image placeholder */}
-            <div className="relative bg-gradient-to-br from-slate to-gold/20 rounded-2xl overflow-hidden aspect-[4/3]">
+            <div className="relative bg-gradient-to-br from-slate to-electric/20 rounded-2xl overflow-hidden aspect-[4/3]">
               <img 
                 src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80"
                 alt="Summit Roofing website on desktop"
@@ -101,10 +101,10 @@ const FeaturedProject = () => {
         {/* Results */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {metrics.map((metric, index) => (
-            <Card key={index} className="border-gold/20 hover:border-gold/40 transition-colors">
+            <Card key={index} className="border-electric/20 hover:border-electric/40 transition-colors">
               <CardContent className="p-6 text-center">
-                <metric.icon size={32} className="text-gold mx-auto mb-4" />
-                <div className="text-3xl font-bold text-gold mb-2">{metric.value}</div>
+                <metric.icon size={32} className="text-electric mx-auto mb-4" />
+                <div className="text-3xl font-bold text-electric mb-2">{metric.value}</div>
                 <div className="text-muted-foreground">{metric.label}</div>
               </CardContent>
             </Card>
@@ -125,8 +125,8 @@ const FeaturedProject = () => {
               </div>
             </div>
             <div>
-              <h5 className="text-lg font-semibold mb-4 text-gold">After</h5>
-              <div className="bg-gold/10 rounded-lg p-6 space-y-2">
+              <h5 className="text-lg font-semibold mb-4 text-electric">After</h5>
+              <div className="bg-electric/10 rounded-lg p-6 space-y-2">
                 <div className="text-sm">• Custom React application</div>
                 <div className="text-sm">• 0.8-second load time</div>
                 <div className="text-sm">• 8.1% conversion rate</div>
