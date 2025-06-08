@@ -1,5 +1,5 @@
 
-import { Palette, Brain, Cube, Zap } from 'lucide-react';
+import { Palette, Brain, Box, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const Services = () => {
@@ -17,10 +17,10 @@ const Services = () => {
       features: ['Market Research', 'Brand Positioning', 'Content Strategy']
     },
     {
-      icon: Cube,
-      title: '3D & Interactive',
-      description: 'Immersive experiences using Three.js, WebGL, and cutting-edge web technologies.',
-      features: ['3D Modeling', 'WebGL', 'Interactive Animations']
+      icon: Box,
+      title: 'Interactive Experiences',
+      description: 'Engaging user experiences with modern animations and interactions.',
+      features: ['Micro-interactions', 'Scroll Animations', 'Interactive Elements']
     },
     {
       icon: Zap,
